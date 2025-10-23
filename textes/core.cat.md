@@ -1,16 +1,20 @@
 # cat Concaténation de fichiers
 
 
-# SYNOPSIS
-
+# Invocation de la commande
 
 `cat [options] [fichiers]`
 
+Concatène des fichiers et envoie la sortie vers la sortie standard.
+
+## options
+
+    -E afficher un $ à la fin des lignes
+    -v afficher les caractères non imprimales.
+    -n numéroter les lignes
+
 fichiers : noms des fichiers à concaténer, - désigne l'entrée standard,
 S'il n'y a pas de nom de fichier alors cat lit l'entrée standard.
-
-
-Concatène des fichiers et envoie la sortie vers la sortie standard.
 
 
 ## EXEMPLES
@@ -30,11 +34,13 @@ Le fichier txt est de petite taille, cat convient très bien pour l'afficher en 
 
 Et pour ajouter un texte frappé au clavier il faut ajouter - dans la liste des fichiers.
 
-``cat - depts24.txt  depts53.txt
-> Départements de la Bretagne et de la Région Centre :``
->^D
+```
+cat - depts24.txt  depts53.txt
+Départements de la Bretagne et de la Région Centre :
+^D
+```
+
 Cet essai sert à montrer l'usage du -. 
 Cette méthode n'est pas recommandée, L'utilisateur doit savoir que la saisie est terminée par ^D.
 La commande read est plus appropriée. 
-
 
