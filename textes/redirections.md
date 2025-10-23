@@ -88,6 +88,29 @@ Le fichier /dev/null est toujours vide.
 tout ce qui y est envoyé est ignoré. 
 Il sert à ignorer Les données d'une sortie en les y envoyant.
 
+Redirection de l'entrée standarde depuis la ligne de commande
+C'est typiquement utilisé dans les scripts pour remplir des fichiers de configuration
+La redirection de l'entrée standarde est indiqueée avec << ou <<<
+Envoyer le reste de la ligne à la commande avec <<<
+
+`cat <<< Bonjour`
+
+affiche Bonjour sur la sortie standard
+Envoyer les lignes suivantes avec << EOF
+
+`commande << EOF`
+
+`Bonjour`
+
+`...`
+
+`EOF`
+
+
+Le shell envoie à la commande ce qui les lignes entre les deux EOL.
+EOL peut être n'importe quel autre nom,
+mais pour la lisibilité il est préférable d'utiliser EOL.
+
 ## Exemples
 
 ### Effacer un fichier ou en créer un vide 
