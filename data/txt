@@ -1,0 +1,26 @@
+
+BEGIN and END are two special kinds of patterns
+which are not tested against the input.
+The action parts of all BEGIN patterns are merged
+as if all the statements had been written
+in a single BEGIN rule.
+They are executed before any of the input is read.
+Similarly, all the END rules are merged,
+and executed when all the input is exhausted 
+(or when an exit statement is executed).
+BEGIN and END patterns cannot be combined with
+other patterns in pattern expressions.
+BEGIN and END patterns cannot have missing action parts.
+
+BEGINFILE and ENDFILE are additional special patterns
+whose actions are executed before
+reading the first record of each command-line input file
+and after reading the last record of each file.
+Inside the BEGINFILE rule,
+the value of ERRNO is the empty string if the file was opened successfully.
+Otherwise, there is some problem with the file and
+the code should use nextfile to skip it.
+If that is not done, gawk produces its usual fatal error
+for files that cannot be opened.
+
+
