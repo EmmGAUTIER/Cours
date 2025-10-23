@@ -2,3 +2,4 @@
 *.aux
 *.gz
 nohup.out
+tmp
